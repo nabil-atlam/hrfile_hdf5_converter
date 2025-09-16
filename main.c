@@ -81,7 +81,7 @@ int main(const int argc, char *argv[]) {
     // Attempt to open the file
     FILE *hrfp = fopen(hrfile, "r");
 
-    clock_t before = clock();
+    const clock_t before = clock();
 
     // NOTE: If the fopen fails to open the file (it does not exist), then errno will store the error number
     //          and hrfp will be NULL
@@ -164,7 +164,7 @@ int main(const int argc, char *argv[]) {
     reH[0] = vals[5] / degeneracy_facts[0]; imH[0] = vals[6] / degeneracy_facts[0];
 
     unsigned int rvecs_counter3 = 0;
-    unsigned int rvecs_counter = 0;
+    unsigned int rvecs_counter  = 0;
     while (fgets(buffer, MAX_BUFF_SIZE, hrfp)) {
 
         strtod_arr(buffer, vals);
