@@ -110,7 +110,7 @@ let
     f = Figure(size = (1000, 1000))
     ax = Axis(f[1, 1])
     for i ∈ 1 : nw
-        lines!(ax, xs, R[i, :], color = :blue)
+        lines!(ax, xs, eks[i, :], color = :blue)
     end
     save("bands.png", f)
 end
